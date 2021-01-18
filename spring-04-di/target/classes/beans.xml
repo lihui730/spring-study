@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+    <bean id="address" class="com.shimmer.pojo.Address">
+        <property name="address" value="学生A的地址"></property>
+    </bean>
+
+    <bean id="student" class="com.shimmer.pojo.Student">
+        <!-- 1. 普通值注入，value-->
+        <property name="name" value="学生A"></property>
+        <!-- 2. bean注入，ref-->
+        <property name="address" ref="address"></property>
+
+        <property name="books">
+            <array>
+                <value>西游记</value>
+                <value>水浒传</value>
+            </array>
+        </property>
+
+        <property name="hobbies">
+            <list>
+                <value>篮球</value>
+                <value>羽毛球</value>
+            </list>
+        </property>
+
+        <property name="cards">
+            <map>
+                <entry key="学生卡" value="12345"></entry>
+                <entry key="身份证" value="123"></entry>
+            </map>
+        </property>
+
+        <property name="games">
+            <set>
+                <value>王者荣耀</value>
+                <value>LOL</value>
+            </set>
+        </property>
+
+        <property name="properties">
+            <props>
+                <prop key="grade">1</prop>
+            </props>
+        </property>
+    </bean>
+</beans>

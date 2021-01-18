@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--开启注解的支持-->
+    <context:annotation-config></context:annotation-config>
+    <bean id="dog" class="com.shimmer.pojo.Dog"></bean>
+    <bean id="cat" class="com.shimmer.pojo.Cat"></bean>
+
+    <!--byName: 会自动在beans上下文查找，和自己对象set方法后面的值 对应的beanid-->
+    <!--byName: 会自动在beans上下文查找，和自己对象类型相同的bean-->
+
+    <bean id="person" class="com.shimmer.pojo.Person" autowire="byName"></bean>
+    <!--
+        <property name="name" value="lily"></property>
+        <property name="cat" ref="cat"></property>
+        <property name="dog" ref="dog"></property>
+    </bean>
+        -->
+</beans>
