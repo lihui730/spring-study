@@ -21,3 +21,20 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# Lines that start with '#' are comments.
+*~
+*.diff
+*#
+.classpath
+.project
+.settings
+.eclipse
+pmd_report.html
+target
+patchprocess
+derby.log
+.idea
+*.iml
+nb-configuration.xml
+.DS_Store
